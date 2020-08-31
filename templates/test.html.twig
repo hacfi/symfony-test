@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<h1>{{ 'Hello'|trans }} !</h1>
+
+{{ 'This value should be false.'|trans([], 'validators') }}
+
+Locale: {{ app.request.locale }}
+
+{% endblock %}
