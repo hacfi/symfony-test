@@ -1,0 +1,8 @@
+aws:
+    version: latest
+    region: eu-central-1
+    credentials:
+        key: "%env(AWS_S3_ACCESS_ID)%"
+        secret: "%env(AWS_S3_ACCESS_SECRET)%"
+    S3:
+        version: '2006-03-01'
