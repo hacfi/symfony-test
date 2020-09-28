@@ -1,0 +1,20 @@
+payum:
+    storages:
+        App\Entity\Payment:
+            doctrine: orm
+
+    security:
+        token_storage:
+            App\Entity\PaymentToken:
+                doctrine: orm
+
+    gateways:
+        offline:
+            factory: offline
+
+        paypal:
+            factory: paypal_express_checkout
+            username: 'CHANGE'
+            password: 'CHANGE'
+            signature: 'CHANGE'
+            sandbox: true
